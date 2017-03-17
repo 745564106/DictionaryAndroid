@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements ActionBar.OnNavig
         switch (item.getItemId()) {
             case R.id.action_search:
                 // search action
-                SearchResultsActivity();
                 return true;
             case R.id.action_location_found:
                 // location found
@@ -72,15 +71,6 @@ public class MainActivity extends AppCompatActivity implements ActionBar.OnNavig
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    /**
-     * Launching new activity
-     */
-    private void SearchResultsActivity() {
-        Intent i = new Intent(MainActivity.this, SearchResultsActivity.class);
-        i.putExtra(SearchManager.QUERY,);
-        startActivity(i);
     }
 
     /**
@@ -130,9 +120,10 @@ public class MainActivity extends AppCompatActivity implements ActionBar.OnNavig
 
         // assigning the spinner navigation
         actionBar.setListNavigationCallbacks(adapter, this);
+
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_location);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_launcher);
     }
 
     // Refresh menu item

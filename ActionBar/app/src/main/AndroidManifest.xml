@@ -23,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Location found activity -->
         <activity
             android:name=".LocationFound"
             android:label="@string/activity_new_message"
@@ -33,7 +35,11 @@
             <!-- android:value="splitActionBarWhenNarrow" /> -->
 
         </activity>
-        <activity android:name=".SearchResultsActivity">
+
+        <!-- Search results activity -->
+        <activity android:name=".SearchResultsActivity"
+            android:label="Search view"
+            android:parentActivityName=".MainActivity">
 
             <!--Should be defined as a intent filter for the activity which receives the search query.-->
             <intent-filter>

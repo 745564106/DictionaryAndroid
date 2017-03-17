@@ -1,8 +1,8 @@
 package com.example.nguyenthanhthai.actionbar;
 
-import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -17,11 +17,13 @@ public class SearchResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search_results);
 
         // get the action bar
-        ActionBar actionBar = getActionBar();
+        ActionBar actionBar = getSupportActionBar();
 
+        actionBar.setHomeButtonEnabled(true);
         // Enabling Back navigation on Action Bar icon
         actionBar.setDisplayHomeAsUpEnabled(true);
-
+        actionBar.setIcon(R.drawable.ic_latitude);
+        actionBar.show();
         txtQuery = (TextView) findViewById(R.id.txtQuery);
 
         handleIntent(getIntent());

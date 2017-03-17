@@ -19,12 +19,11 @@ public class LocationFound extends AppCompatActivity {
         // get action bar
         ActionBar actionBar = getSupportActionBar();
 
+
+        actionBar.setHomeButtonEnabled(true);
         // Enabling Up / Back navigation
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setIcon(R.drawable.ic_location);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_location);
         actionBar.show();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_location);
     }
 }
