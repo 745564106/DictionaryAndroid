@@ -20,16 +20,20 @@ import android.support.v7.widget.util.SortedListAdapterCallback;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nguyenthanhthai.dictionaryandroid.R;
 import com.example.nguyenthanhthai.dictionaryandroid.adapter.WordMearningAdapter;
+import com.example.nguyenthanhthai.dictionaryandroid.customview.CustomRVItemTouchListener;
+import com.example.nguyenthanhthai.dictionaryandroid.customview.RecyclerViewItemClickListener;
 import com.example.nguyenthanhthai.dictionaryandroid.domain.WordMearning;
 import com.example.nguyenthanhthai.dictionaryandroid.model.Mearning;
 import com.example.nguyenthanhthai.dictionaryandroid.model.Word;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -61,7 +65,7 @@ public class SearchWordActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.show();
 
-        handleIntent(getIntent());
+
     }
 
     private void addControls() {
@@ -71,37 +75,24 @@ public class SearchWordActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),LinearLayoutManager.HORIZONTAL);
-
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), LinearLayoutManager.HORIZONTAL);
         dividerItemDecoration.setDrawable(
                 ContextCompat.getDrawable(getBaseContext(), R.drawable.ic_divider));
+        recyclerView.addOnItemTouchListener(new CustomRVItemTouchListener(this, recyclerView, new RecyclerViewItemClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                Intent intent=new Intent(getBaseContext(),ContentWordActivity.class);
+                intent.putExtra("WordId", words.get(position).getWordId());
+                startActivity(intent);
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
     }
 
-    //
-    @Override
-    protected void onNewIntent(Intent intent) {
-        setIntent(intent);
-        handleIntent(intent);
-    }
-
-    /**
-     * Handling intent data
-     */
-    private void handleIntent(Intent intent) {
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String query = intent.getStringExtra(SearchManager.QUERY);
-
-            /**
-             * Use this query to display search results like
-             * 1. Getting the data from SQLite and showing in listview
-             * 2. Making webrequest and displaying the data
-             * For now we just display the query only
-             */
-            query += "dd";
-
-        }
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -134,7 +125,7 @@ public class SearchWordActivity extends AppCompatActivity {
     }
 
     private void viewListWordSearch(String textWord) {
-        if (textWord=="")
+        if (textWord == "")
             return;
         LoadData loadDataThread = new LoadData();
         loadDataThread.execute(textWord);

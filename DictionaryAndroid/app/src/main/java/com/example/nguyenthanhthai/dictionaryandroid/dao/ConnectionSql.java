@@ -13,7 +13,7 @@ import java.sql.SQLException;
  */
 
 public class ConnectionSql {
-    static String ip = "192.168.0.152:1433";
+    static String ip = "192.168.0.153:1433";
     static String classs = "net.sourceforge.jtds.jdbc.Driver";
     static String db = "DictionaryDb";
     static String un = "sa";

@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".presentation.MainActivity">
             <!--Defines the default searchable activity handle search.-->
             <!--You can add this block anywhere in the manifest file either inside <application> tag or <activity> tag.-->
@@ -43,9 +44,14 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+
+        <activity android:name=".presentation.ContentWordActivity"
+            android:label="Word Mearning"
+            android:parentActivityName=".presentation.SearchWordActivity">
 
         </activity>
     </application>
