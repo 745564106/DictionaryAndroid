@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/mn_padding_left" android:paddingRight="@dimen/item_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mn_padding_top"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bullet" android:background="@drawable/meaning_bullet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" />
+    <com.vng.dict.view.NewRobotoTextView android:textSize="16.0sp" android:textColor="@color/meaning" android:textColorHighlight="@color/cross_lookup_pressed" android:textColorLink="@drawable/mn_text_color" android:gravity="center_vertical" android:id="@id/meaning_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/desc_text" android:layout_toRightOf="@id/bullet" font="bold" />
+</RelativeLayout>

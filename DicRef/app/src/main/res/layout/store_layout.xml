@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/store" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dragView" android:background="#ff0090ff" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/back_to_previous" android:background="?selectableItemBackground" android:padding="@dimen/activity_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back" android:layout_centerVertical="true" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/item_select_dict" android:layout_toRightOf="@id/back_to_previous" android:layout_centerInParent="true" font="medium" />
+        <ImageView android:id="@id/dict_store_manage_search" android:background="?selectableItemBackground" android:padding="@dimen/activity_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_search" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/dict_store_manage_edit" android:background="?selectableItemBackground" android:padding="@dimen/activity_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_edit" android:layout_toLeftOf="@id/dict_store_manage_search" android:layout_centerVertical="true" />
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_toRightOf="@id/back_to_previous" android:layout_centerVertical="true">
+            <com.vng.standout.ui.CustomAutoCompleteTextView android:textSize="18.0sp" android:textColor="@color/white" android:textColorHighlight="@color/white" android:textColorHint="@color/white" android:id="@id/dict_store_tv_search" android:background="@drawable/textbox_search" android:paddingLeft="5.0dip" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/search_store_hint" android:singleLine="true" android:maxLength="50" android:layout_centerHorizontal="true" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/color_cursor" />
+            <ImageView android:layout_gravity="right" android:id="@id/dict_store_btclear" android:background="?selectableItemBackground" android:padding="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/delete_search_word" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/store_main_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/dragView">
+        <com.viewpagerindicator.TabPageIndicator android:id="@id/indicator" android:layout_width="fill_parent" android:layout_height="@dimen/menu_tab" />
+        <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ListView android:id="@id/store_lv_search" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:layout_below="@id/dragView" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/view_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/dragView">
+        <ImageView android:id="@id/store_iv_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_emptystate" />
+        <TextView android:textColor="@color/black" android:id="@id/store_tv1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/store_no_result" />
+    </LinearLayout>
+</RelativeLayout>

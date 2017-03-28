@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -119,6 +120,13 @@ public class SearchWordActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 viewListWordSearch(query);
+                ////Hide keyboard
+                // Check if no view has focus:
+                View view = getCurrentFocus();
+                if (view != null) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
                 return true;
             }
         });

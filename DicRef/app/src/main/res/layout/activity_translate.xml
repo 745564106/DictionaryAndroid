@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dragView" android:background="@color/white" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <ImageView android:id="@id/back_to_previous" android:background="?selectableItemBackground" android:padding="@dimen/activity_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_back" android:layout_centerVertical="true" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/item_translate_sentence" android:layout_toRightOf="@id/back_to_previous" android:layout_centerInParent="true" font="medium" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/frame" android:fitsSystemWindows="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/dragView" />
+    <View android:background="@drawable/above_shadow" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/dragView" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/store" android:background="@color/white" android:paddingLeft="@dimen/frame_left_parding" android:paddingTop="@dimen/frame_top_parding" android:paddingRight="@dimen/frame_right_parding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dragView" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/back_to_previous" layout="@layout/back_to_previous" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="#ff3d3d3d" android:id="@id/title" android:paddingLeft="@dimen/fragment_title_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/item_select_dict" android:layout_toRightOf="@id/back_to_previous" android:layout_centerInParent="true" font="medium" />
+    </RelativeLayout>
+    <com.vng.dict.expandablelistview.DragNDropListView android:id="@id/expandListEdit" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:groupIndicator="@color/main_color" android:divider="@drawable/dash" android:dividerHeight="1.0dip" />
+</LinearLayout>

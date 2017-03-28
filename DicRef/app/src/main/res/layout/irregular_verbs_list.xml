@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="#ff797979" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+        <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/small" android:textColor="@color/white" android:ellipsize="end" android:id="@id/irr_inf" android:paddingLeft="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/inf_verbs_hint" android:layout_weight="1.0" font="bold" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/small" android:textColor="@color/white" android:ellipsize="end" android:id="@id/irr_sim" android:paddingLeft="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sim_verbs_hint" android:layout_weight="1.0" font="bold" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/small" android:textColor="@color/white" android:ellipsize="end" android:id="@id/irr_par" android:paddingLeft="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/par_verbs_hint" android:layout_weight="1.0" font="bold" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice" />
+</LinearLayout>

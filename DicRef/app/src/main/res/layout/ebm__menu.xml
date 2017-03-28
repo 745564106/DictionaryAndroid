@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/ebm__menu_close_image" android:background="@drawable/ic_search_hold_home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-83.0dip" android:layout_marginBottom="-83.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <View android:id="@id/ebm__menu_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ebm__menu_middle_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/ebm__menu_middle_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dip" android:maxLines="3" android:lines="3" />
+        <ImageButton android:layout_gravity="center_horizontal" android:id="@id/ebm__menu_middle_image" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/ebm__menu_left_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/search_margin" android:layout_marginBottom="@dimen/search_margin" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageButton android:layout_gravity="center" android:id="@id/ebm__menu_left_image" android:background="@drawable/ic_search_selected_eng" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/search_left_button_text_size" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/ebm__menu_left_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eng" android:maxLines="3" android:lines="3" font="bold" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ebm__menu_right_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/ebm__menu_right_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dip" android:maxLines="3" android:lines="3" />
+        <ImageButton android:layout_gravity="center_horizontal" android:id="@id/ebm__menu_right_image" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </LinearLayout>
+</RelativeLayout>

@@ -22,6 +22,25 @@ import java.util.Map;
 public class WordMearning {
     static DataAccess da;
 
+    public static Word getWord(int wordId) {
+        String query = "exec spWordWithId " + wordId;
+        da = new DataAccess();
+        ResultSet rs = da.excuteQuery(query);
+        Word word=null;
+        try {
+            while (rs.next()) {
+                int WordId = rs.getInt("WordId");
+                String WordText = rs.getString("WordText");
+                String LanguageId = rs.getString("LanguageId");
+                String Pronounce = rs.getString("Pronounce");
+                word=new Word(WordId,WordText,Pronounce);
+            }
+        } catch (Exception ex) {
+            Log.d("\n\nEX", ex.getMessage());
+        }
+        return word;
+    }
+
     /**
      * Get list word when search with wordtext
      */
@@ -64,63 +83,71 @@ public class WordMearning {
         if (word == null) {
             return null;
         }
-        String query = "exec spWordAndMeaning N'" + word.getWordId() + "'";
+        String query = "exec spMeaningWordTypeList " + word.getWordId();
         da = new DataAccess();
         ResultSet rs = da.excuteQuery(query);
-        Map<Integer, Word> mearningMapWordId;
-        mearningMapWordId = new HashMap<Integer, Word>();
+        List<WordType>  listWordType;
+        listWordType =new ArrayList<WordType>();
         try {
             while (rs.next()) {
-                int wordId = rs.getInt("WordId");
-                String wordTextGet = rs.getString("WordText");
-                String pronounce = rs.getString("Pronounce");
-                String mearningText = rs.getString("MearningText");
-                Mearning mearning = new Mearning();
-                mearning.setMearningText(mearningText);
+                int TypeId = rs.getInt("TypeId");
+                String TypeName = rs.getString("TypeName");
+                listWordType.add(new WordType(TypeId, TypeName));
+            }
+        } catch (Exception ex) {
+            Log.d("\n\nEX", ex.getMessage());
+        }
+        return listWordType;
+    }
 
-                if (mearningMapWordId.containsKey(wordId)) {
-                    mearningMapWordId.get(wordId).getMearnings().add(mearning);
-                    continue;
+    public static List<Mearning> getListMearning(Word word, WordType type) {
+        if (word == null) {
+            return null;
+        }
+
+        String query = "exec spListMeaningWithType "+ word.getWordId()+ ", 'vi', "+type.getTypeId();
+        da = new DataAccess();
+        ResultSet rs = da.excuteQuery(query);
+
+        List<Mearning> mearnings=new ArrayList<>();
+
+        try {
+            while (rs.next()) {
+
+                if (rs.getObject("ExampleId")!=null) {
+                    int exampleGroupId=rs.getInt("ExampleId");
+                    String MearningText = rs.getString("MearningText");
+                    List<Example> examples =new ArrayList<>();
+                    examples=getListExample(exampleGroupId);
+                    mearnings.add(new Mearning(MearningText,examples));
+                }else {
+                    String MearningText = rs.getString("MearningText");
+                    mearnings.add(new Mearning(MearningText,null));
                 }
-
-                Word wordn = new Word(wordId, wordTextGet, pronounce);
-                wordn.setMearnings(new ArrayList<Mearning>());
-                wordn.getMearnings().add(mearning);
-                mearningMapWordId.put(wordId, wordn);
             }
         } catch (Exception ex) {
             Log.d("\n\nEX", ex.getMessage());
         }
 
-        List<WordType>  listWordType;
-        listWordType =new ArrayList<WordType>();
-        listWordType.add(new WordType(1, "danh từ"));
-        listWordType.add(new WordType(2, "động từ"));
-        return listWordType;
+        return  mearnings;
     }
 
-    public static List<Mearning> getListMearning(Word word, WordType type) {
-        List<Mearning> mearnings=new ArrayList<>();
-        mearnings.add(new Mearning(1,"trọng âm"));
-        mearnings.add(new Mearning(2,"dấu trọng âm"));
-        Example example=new Example(1,"speak English with a French accent","nói tiếng anh với giọng pháp");
-        Example example2=new Example(2," 2 speak English with a French accent","nói tiếng anh với giọng pháp");
-        Example example3=new Example(1,"in all our products the accent í on quality","trong tất cả sản phẩm của chúng tôi, điều chúng tôi nhấn mạnh là chất lượng");
-        List<Example> list1, list2;
-        list1=new ArrayList<>();
-        list1.add(example);
-        list1.add(example2);
-        list2=new ArrayList<>();
-        list2.add(example3);
-        mearnings.add(new Mearning(3,"giọng",list1));
-        mearnings.add(new Mearning(3,"điều nhấn mạnh",list2));
-
-        if (type.getTypeId()==1)
-            return mearnings;
-
-        List<Mearning> mearnings2=new ArrayList<>();
-        mearnings2.add(new Mearning(1,"đọc nhấn mạnh"));
-        mearnings2.add(new Mearning(1,"đánh dấu âm"));
-        return  mearnings2;
+    private static List<Example> getListExample(int exampleGroupId) {
+        String query = "exec spListExample " + exampleGroupId;
+        da = new DataAccess();
+        ResultSet rs = da.excuteQuery(query);
+        List<Example>  listExample;
+        listExample =new ArrayList<Example>();
+        try {
+            while (rs.next()) {
+                int ExampleId = rs.getInt("ExampleId");
+                String ExampleText = rs.getString("ExampleText");
+                String MearningExample = rs.getString("MearningExample");
+                listExample.add(new Example(ExampleId,ExampleText,MearningExample));
+            }
+        } catch (Exception ex) {
+            Log.d("\n\nEX", ex.getMessage());
+        }
+        return listExample;
     }
 }

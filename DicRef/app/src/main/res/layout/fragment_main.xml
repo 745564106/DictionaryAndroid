@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:focusable="false" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/open_left_menu" android:background="?selectableItemBackground" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_menu" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/voice_btn" android:background="@drawable/button_selector" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_voice" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <EditText android:textSize="18.0sp" android:textColor="@color/search_edittext" android:textColorHighlight="@color/cross_lookup_pressed" android:textColorHint="@color/search_hint" android:id="@id/editSearchMain" android:background="@drawable/textbox_search" android:paddingRight="25.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="8.0dip" android:hint="@string/search_hint" android:singleLine="true" android:maxLength="30" android:layout_toLeftOf="@id/voice_btn" android:layout_toRightOf="@id/open_left_menu" android:layout_centerVertical="true" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/color_cursor" />
+    </RelativeLayout>
+    <FrameLayout android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@id/list_history" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/transparent" android:divider="@drawable/divider" android:dividerHeight="1.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/llHeader" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rlWod" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vng.dict.wordofday.ViewPager android:gravity="center" android:id="@id/viewpager" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/wod_height" />
+            </RelativeLayout>
+            <TextView android:textSize="15.0sp" android:textColor="#ffa6a8ab" android:id="@id/list_history_title" android:background="@android:color/white" android:paddingLeft="16.0dip" android:paddingTop="5.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/history_title_height" android:text="@string/search_recents" />
+            <com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="@color/empty_list" android:gravity="center" android:id="@id/empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:text="@string/recents_empty" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

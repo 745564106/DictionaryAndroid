@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/border" android:paddingBottom="@dimen/wod_item_pad_top_bot" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/wod_item_pad_top_bot" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/wod_item_image_owl_content">
+            <ImageView android:layout_gravity="center" android:id="@id/ivOwl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/word_of_day_owl_2" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <com.vng.dict.view.NewRobotoTextView android:textSize="30.0sp" android:textColor="@color/black" android:id="@id/tvWord" android:paddingLeft="@dimen/wod_item_title_padding" android:paddingRight="@dimen/wod_item_title_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/desc_text" android:drawablePadding="10.0dip" android:inputType="textCapSentences" font="bold" />
+        <LinearLayout android:orientation="vertical" android:id="@id/llWordContent" android:paddingLeft="@dimen/wod_content_side_padding_left" android:paddingRight="@dimen/wod_content_side_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageButton android:id="@id/ibCloseWod" android:background="@android:color/transparent" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

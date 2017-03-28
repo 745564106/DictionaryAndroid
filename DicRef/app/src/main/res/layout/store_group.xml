@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vng.dict.view.NewRobotoTextView android:textSize="18.0sp" android:textColor="@color/gray" android:id="@id/tvGroup" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/dict_hint" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/main_color_press" android:id="@id/tvUpdateAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/store_header_update_all" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

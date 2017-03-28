@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/item" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/item_left" android:padding="@dimen/activity_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/item_title" android:padding="@dimen/activity_margin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/item_home" android:singleLine="true" android:layout_weight="1.0" />
+        <ImageView android:id="@id/item_right" android:padding="@dimen/activity_margin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home" />
+    </LinearLayout>
+</FrameLayout>

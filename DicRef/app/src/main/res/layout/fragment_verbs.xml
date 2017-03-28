@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/verbs" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dragView" android:background="@color/white" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <ImageView android:id="@id/back_to_previous" android:background="?selectableItemBackground" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_back" android:layout_centerVertical="true" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/item_verbs" android:layout_toRightOf="@id/back_to_previous" android:layout_centerInParent="true" font="medium" />
+    </RelativeLayout>
+    <View android:background="@drawable/above_shadow" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <EditText android:textSize="16.0sp" android:textColor="@color/search_edittext" android:textColorHighlight="@color/cross_lookup_pressed" android:textColorHint="#26231f20" android:id="@id/filter" android:background="@drawable/search_box" android:padding="5.0dip" android:paddingLeft="@dimen/frame_left_parding" android:paddingRight="@dimen/frame_right_parding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="@dimen/frame_top_parding" android:layout_marginRight="16.0dip" android:layout_marginBottom="6.0dip" android:hint="@string/search_hint" android:selectAllOnFocus="true" android:maxLength="30" android:inputType="text" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/color_cursor" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="@dimen/fragment_title_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/verb_title_size" android:textColor="@color/about_content" android:gravity="center|left" android:id="@id/irr_inf" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/inf_verbs_hint" android:layout_weight="1.0" font="bold" />
+        <View android:background="@color/divider" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/verb_title_size" android:textColor="@color/about_content" android:gravity="center" android:id="@id/irr_sim" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sim_verbs_hint" android:layout_weight="1.0" font="bold" />
+        <View android:background="@color/divider" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/verb_title_size" android:textColor="@color/about_content" android:gravity="center|right" android:id="@id/irr_par" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/par_verbs_hint" android:layout_weight="1.0" font="bold" />
+    </LinearLayout>
+    <FrameLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/list_words" />
+    </FrameLayout>
+</LinearLayout>

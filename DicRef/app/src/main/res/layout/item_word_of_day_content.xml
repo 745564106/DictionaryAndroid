@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/llWordOfDayContent" android:background="@drawable/word_of_day_content_activity_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlTop" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/ibCloseWordOfDayContent" android:background="@android:color/transparent" android:layout_width="@dimen/wod_content_btn_close" android:layout_height="@dimen/wod_content_btn_close" android:src="@drawable/word_of_day_content_ic_close" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <com.vng.dict.view.WordContentListView android:id="@id/list_word_part" android:paddingLeft="@dimen/wod_content_side_padding_left" android:paddingRight="@dimen/wod_content_side_padding_right" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@color/white" android:dividerHeight="0.0dip" android:layout_weight="1.0" />
+    <View android:id="@id/vBottom" android:layout_width="fill_parent" android:layout_height="@dimen/wod_content_bottom" />
+</LinearLayout>

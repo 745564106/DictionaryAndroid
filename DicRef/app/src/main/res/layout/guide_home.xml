@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/guide_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearance" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="200.0dip" android:text="@string/home_guide_mess" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.vng.dict.view.NewRobotoTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_skip" android:background="@drawable/button_blue_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="25.0dip" android:minWidth="80.0dip" android:minHeight="40.0dip" android:text="@string/got_it" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_marginBottom="14.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_1" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/search_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/guide_search_white" />
+    </LinearLayout>
+</RelativeLayout>

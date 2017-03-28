@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dragView" android:background="#ff0090ff" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/menu_tab">
+        <ImageView android:id="@id/back_to_previous" android:background="@drawable/button_selector" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back" android:layout_centerVertical="true" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/backup" android:layout_toRightOf="@id/back_to_previous" android:layout_centerInParent="true" font="medium" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/v_choose_backup_recent_word" android:background="@drawable/selector_conv_list_item" android:padding="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/black" android:id="@id/backup_all_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/backup_recent" android:layout_weight="1.0" />
+                    <CheckBox android:id="@id/check_choose_backup_recent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+                </LinearLayout>
+                <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/new_backup_restore_text_size" android:textColor="@color/black" android:id="@id/recent_word_count" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <include layout="@layout/include_divider" />
+            <LinearLayout android:orientation="vertical" android:id="@id/v_choose_backup_favor_word" android:background="@drawable/selector_conv_list_item" android:padding="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/black" android:id="@id/text_bk_choose" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/backup_favorite" android:layout_weight="1.0" />
+                    <CheckBox android:id="@id/check_choose_backup_favor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+                </LinearLayout>
+                <com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/new_backup_restore_text_size" android:textColor="@color/black" android:id="@id/favor_word_count" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <include layout="@layout/include_divider" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/v_upload_cloud" android:background="@drawable/selector_conv_list_item" android:padding="16.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/black" android:id="@id/tv_upload_cloud" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/upload_to_cloud_storage" android:layout_weight="1.0" />
+                <CheckBox android:enabled="false" android:gravity="center_vertical" android:id="@id/check_upload_cloud" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" />
+            </LinearLayout>
+            <CheckBox android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/check_upload_local" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/save_to_local" />
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:background="#fff6f6f6" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btn_backup" android:text="@string/backup_now" style="@style/BackupButton" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textSize="12.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/text_backup_time" android:layout_width="72.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" font="light" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/background_backup_item" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip">
+        <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/text_backup_label" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceSmall" android:textSize="14.0sp" android:textColor="@color/main_color" android:gravity="center" android:id="@id/text_backup_favor" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:drawableLeft="@drawable/ic_favorite" android:drawablePadding="4.0dip" android:layout_weight="1.0" font="light" />
+            <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceSmall" android:textSize="14.0sp" android:textColor="@color/main_color" android:gravity="center" android:id="@id/text_backup_recent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:drawableLeft="@drawable/ic_recent" android:drawablePadding="4.0dip" android:layout_weight="1.0" font="light" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

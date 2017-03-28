@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip">
+            <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/color_text_prefernce_sum" android:id="@id/textLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" />
+            <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/color_text_prefernce_sum" android:layout_gravity="right" android:id="@id/textRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/100" />
+        </FrameLayout>
+        <ProgressBar android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginTop="10.0dip" android:max="100" android:progressDrawable="@drawable/progress_bar_states" style="?android:attr/progressBarStyleHorizontal" />
+        <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/color_text_prefernce" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/downloading_status" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="14.0sp" android:textColor="@color/dialog_title" android:id="@id/exit_btn" android:background="@drawable/button_selector" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_download_exit" />
+    </LinearLayout>
+</LinearLayout>

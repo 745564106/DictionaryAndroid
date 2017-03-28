@@ -12,19 +12,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nguyenthanhthai.dictionaryandroid.R;
 import com.example.nguyenthanhthai.dictionaryandroid.adapter.ContentWordAdapter;
+import com.example.nguyenthanhthai.dictionaryandroid.domain.WordFavorite;
+import com.example.nguyenthanhthai.dictionaryandroid.domain.WordMearning;
 import com.example.nguyenthanhthai.dictionaryandroid.model.Word;
 
 /**
  * Created by NguyenThanhThai on 3/27/2017.
  */
 
-public class ContentWordActivity extends AppCompatActivity {
+public class ContentWordActivity extends AppCompatActivity{
     ActionBar actionBar;
     private RecyclerView recyclerView;
     Word word;
@@ -36,7 +39,9 @@ public class ContentWordActivity extends AppCompatActivity {
 
         getActionMyBar();
         addControls();
+        addEvents();
     }
+
 
     TextView wordText,wordPronounce;
     ImageView imageFavorite;
@@ -46,12 +51,20 @@ public class ContentWordActivity extends AppCompatActivity {
         imageFavorite= (ImageView) findViewById(R.id.imageFavorite);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main_actions, menu);
-
-        return super.onCreateOptionsMenu(menu);
+    private void addEvents() {
+        imageFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (word.getFavoriteWord()){
+                    imageFavorite.setImageResource(R.drawable.unfavorite);
+                    word.getRemoveWordFavorite();
+                }
+                else {
+                    imageFavorite.setImageResource(R.drawable.favorite);
+                    word.getInsertWordFavorite();
+                }
+            }
+        });
     }
 
     @Override
@@ -91,19 +104,20 @@ public class ContentWordActivity extends AppCompatActivity {
      * Handling intent data
      */
     private void handleIntent(Intent intent) {
-        word=new Word();
-        word.setWordId(1);
-        word.setWordText("accent");
-        word.setPronounce("accent");
-
-       intent.getIntExtra("WordId",0);
+        word= WordMearning.getWord(intent.getIntExtra("WordId",0));
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "Heeeee", Toast.LENGTH_SHORT).show();
-       // wordText.setText(word.getWordText());
+        wordText.setText(word.getWordText());
+        wordPronounce.setText(word.getPronounce());
+        if (word.getFavoriteWord()){
+            imageFavorite.setImageResource(R.drawable.favorite);
+        }
+        else {
+            imageFavorite.setImageResource(R.drawable.unfavorite);
+        }
 
         ContentWordAdapter adapter = new ContentWordAdapter(word);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, OrientationHelper.VERTICAL, false);

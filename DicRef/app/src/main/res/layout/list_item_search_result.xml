@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/selector_list" android:paddingLeft="5.0dip" android:paddingTop="9.0dip" android:paddingRight="5.0dip" android:paddingBottom="11.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="90.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vng.dict.view.NewRobotoTextView android:textSize="18.0sp" android:textColor="@color/word_text_normal" android:ellipsize="end" android:id="@id/word_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="word" android:singleLine="true" android:layout_alignParentLeft="true" />
+    <com.vng.dict.view.NewRobotoTextView android:textSize="16.0sp" android:textColor="@color/phonetic" android:id="@id/phonetic_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/wɜ:d/ " android:maxLines="1" android:layout_alignParentRight="true" />
+    <com.vng.dict.view.NewRobotoTextView android:textSize="15.0sp" android:textColor="@color/short_content" android:ellipsize="end" android:id="@id/short_content_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Danh từ: từ, lời, lời báo tin, lời nhắn gửi, lời nói" android:maxLines="2" android:layout_below="@id/word_text" />
+</RelativeLayout>

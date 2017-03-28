@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/word_of_day_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vng.dict.view.NewRobotoTextView android:textSize="32.0sp" android:textColor="@android:color/white" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/wod_title_margin_top" android:text="@string/item_word_of_day" font="regular" />
+    <com.vng.dict.view.NewRobotoTextView android:textSize="15.0sp" android:textColor="@color/wod_text" android:gravity="center_vertical" android:id="@id/tvWordOfDayDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/wod_title_margin_bot" font="regular" />
+    <com.vng.dict.wordofday.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.vng.dict.view.NewRobotoTextView android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/btViewAllWordOfDay" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/word_of_day_view_all" font="regular" />
+    <FrameLayout android:paddingLeft="@dimen/wod_bt_stop_noti_margin_left_fm_wod" android:paddingBottom="@dimen/wod_bt_stop_noti_margin_bot_fm_wod" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/wod_bt_stop_noti_margin_top_fm_wod">
+        <com.vng.dict.view.NewRobotoTextView android:textSize="16.0sp" android:textColor="@color/wod_text" android:id="@id/btWordOfDayStopNotification" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/word_of_day_stop_notification" font="regular" />
+    </FrameLayout>
+</LinearLayout>

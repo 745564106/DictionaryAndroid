@@ -7,17 +7,13 @@ import java.util.List;
  */
 
 public class Mearning {
-    int exampleId;
     String mearningText;
     Word word;
     Language language;
     List<Example> examples;
 
-    public Mearning(int exampleId, String mearningText, List<Example> examples) {
-        this.exampleId = exampleId;
+    public Mearning(String mearningText, List<Example> examples) {
         this.mearningText = mearningText;
-        this.word = word;
-        this.language = language;
         this.examples = examples;
     }
 
@@ -28,14 +24,6 @@ public class Mearning {
 
     public void setExamples(List<Example> examples) {
         this.examples = examples;
-    }
-
-    public int getExampleId() {
-        return exampleId;
-    }
-
-    public void setExampleId(int exampleId) {
-        this.exampleId = exampleId;
     }
 
     public String getMearningText() {
@@ -54,9 +42,8 @@ public class Mearning {
         this.word = word;
     }
 
-    public Mearning(int exampleId, String mearningText) {
+    public Mearning(String mearningText) {
 
-        this.exampleId = exampleId;
         this.mearningText = mearningText;
     }
     public Mearning() {}

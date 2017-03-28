@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="suggestion_entries_list_preference">
+        <item>5 từ</item>
+        <item>10 từ</item>
+        <item>15 từ</item>
+        <item>20 từ</item>
+    </string-array>
+    <integer-array name="suggestion_values_list_preference">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </integer-array>
+    <string-array name="lookup_entries_list_preference">
+        <item>Hiển thị menu lựa chọn</item>
+        <item>Tra cứu trực tiếp</item>
+    </string-array>
+    <integer-array name="lookup_values_list_preference">
+        <item>0</item>
+        <item>1</item>
+    </integer-array>
+    <string-array name="language_entries_list_preference">
+        <item>Tiếng Anh</item>
+        <item>Tiếng Việt</item>
+    </string-array>
+    <integer-array name="language_values_list_preference">
+        <item>0</item>
+        <item>1</item>
+    </integer-array>
+    <string-array name="ocrenginemodes">
+        <item>Tesseract</item>
+        <item>Cube</item>
+        <item>Cả hai</item>
+    </string-array>
+    <string-array name="languagenames">
+        <item>Arabic</item>
+        <item>Bulgarian</item>
+        <item>Catalan</item>
+        <item>Chinese (Simplified)</item>
+        <item>Chinese (Traditional)</item>
+        <item>Czech</item>
+        <item>Danish</item>
+        <item>Dutch</item>
+        <item>Tiếng Anh</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Hindi</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Latvian</item>
+        <item>Lithuanian</item>
+        <item>Norwegian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Serbian (Latin)</item>
+        <item>Slovak</item>
+        <item>Slovenian</item>
+        <item>Spanish</item>
+        <item>Swedish</item>
+        <item>Tagalog</item>
+        <item>Thai</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Tiếng Việt</item>
+    </string-array>
+    <string-array name="short_languagenames">
+        <item>Tiếng Anh</item>
+        <item>Tiếng Việt</item>
+    </string-array>
+    <string-array name="country_arrays">
+        <item>Tiếng Anh</item>
+        <item>Tiếng Việt</item>
+        <item>Tiếng Pháp</item>
+        <item>Tiếng Đức</item>
+        <item>CH Séc</item>
+        <item>Tiếng Ý</item>
+        <item>Tiếng Nga</item>
+        <item>Tây Ban Nha</item>
+        <item>Bồ Đào Nha</item>
+    </string-array>
+    <string-array name="dict_type_short">
+        <item>AV</item>
+        <item>VA</item>
+        <item>AA</item>
+        <item>ĐN</item>
+    </string-array>
+    <string-array name="databases_name">
+        <item>Anh - Việt</item>
+        <item>Việt - Anh</item>
+        <item>Anh - Anh</item>
+        <item>Đồng Nghĩa</item>
+    </string-array>
+    <string-array name="tabs_name">
+        <item>ANH VIỆT</item>
+        <item>ANH ANH</item>
+        <item>Đ.NGHĨA</item>
+    </string-array>
+    <string-array name="text_sizes">
+        <item>Nhỏ</item>
+        <item>Vừa</item>
+        <item>Lớn</item>
+        <item>Rất Lớn</item>
+    </string-array>
+    <string-array name="speech_method">
+        <item>Giọng đọc tự nhiên</item>
+        <item>Giọng đọc máy</item>
+    </string-array>
+</resources>

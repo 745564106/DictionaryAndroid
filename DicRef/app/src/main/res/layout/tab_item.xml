@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vng.dict.view.NewRobotoTextView android:textSize="@dimen/tab_text_size" android:textStyle="bold" android:textColor="@drawable/tab_text_selector" android:gravity="center" android:layout_gravity="center" android:id="@id/tab_item" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/content_tab_eng_viet"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

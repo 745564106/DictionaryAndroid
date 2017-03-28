@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/move_icon_customizer_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icmpmove" android:layout_centerVertical="true" android:contentDescription="@null" />
+    <TextView android:textSize="22.0sp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/txt__customizer_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/translate_txt" android:layout_toRightOf="@id/move_icon_customizer_item" android:layout_centerVertical="true" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/del_icon_customizer_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/delete_search_word" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+</RelativeLayout>

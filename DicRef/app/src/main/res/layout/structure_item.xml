@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="@color/structure" android:textColorHighlight="@color/cross_lookup_pressed" android:textColorLink="@drawable/st_text_color" android:id="@id/structure_name" android:paddingLeft="@dimen/st_padding_left" android:paddingRight="@dimen/item_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/st_margin_top" android:text="@string/desc_text" android:drawableLeft="@drawable/structure_drawable" android:drawablePadding="9.0dip" font="bold"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

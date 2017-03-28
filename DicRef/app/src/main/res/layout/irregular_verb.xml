@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/article_title" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.vng.dict.view.NewRobotoTextView android:layout_width="8.0dip" android:layout_height="wrap_content" />
+        <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/article_title" android:id="@id/irr_infinitive" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VerbTextViewStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.vng.dict.view.NewRobotoTextView android:layout_width="8.0dip" android:layout_height="wrap_content" />
+        <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/article_title" android:id="@id/irr_simple" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VerbTextViewStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.vng.dict.view.NewRobotoTextView android:layout_width="8.0dip" android:layout_height="wrap_content" />
+        <com.vng.dict.view.NewRobotoTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/article_title" android:id="@id/irr_participle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VerbTextViewStyle" />
+    </LinearLayout>
+</LinearLayout>

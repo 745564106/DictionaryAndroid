@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/about_header" />
+    <include android:id="@id/back_to_previous" layout="@layout/back_to_previous" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header">
+        <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vng.dict.view.NewRobotoTextView android:text="Thông tin" style="@style/AboutHeaderTextViewStyle" font="bold" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Là phần mềm tra từ điển Anh-Việt, Việt-Anh, Anh-Anh miễn phí trên thiết bị smart phone." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Ứng dụng này được phát triển và sở hữu bởi VNG, tất cả các quyền sở hữu trí tuệ liên quan đến ứng dụng sẽ thuộc quyền sở hữu duy nhất bởi VNG." style="@style/AboutTextViewStyle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <com.vng.dict.view.NewRobotoTextView android:text="Tính năng" style="@style/AboutHeaderTextViewStyle" font="bold" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Gợi ý các từ gần giống khi người dùng nhập từ." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Tra chéo giữa các bộ từ điển bằng cách nhấn lâu vào từ cần tra." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Tra từ từ ứng dụng khác có hỗ trợ “Share Text”." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Voice Search (sử dụng Google Voice Search)." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Quick Search (Tra từ nhanh dạng popup không cần chuyển qua lại giữa từ điển và các ứng dụng khác)" style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Đọc bằng giọng tự nhiên khi có kết nối internet." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Bảng Động từ bất quy tắc tiếng Anh." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Chia sẻ dữ liệu đã tra cứu..." style="@style/AboutTextViewStyle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <com.vng.dict.view.NewRobotoTextView android:text="Nội dung" style="@style/AboutHeaderTextViewStyle" font="bold" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Từ điển Anh-Việt với hơn 300.000 từ trong đó có 120.000 thí dụ được biên soạn trên cơ sở các từ điển và tư liệu mới nhất ở Anh và ở Việt Nam. Năm 2005, từ điển này đã được trao giải thưởng của Nhà nước Việt Nam dành cho công trình Khoa học và Công nghệ xuất sắc." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Từ điển Anh-Việt của Tác giả Lê Khả Kế được VNG mua bản quyền từ Viện Ngôn Ngữ Học Việt Nam." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Từ điển Việt-Anh với hơn 35.000 từ." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Từ điển Anh-Anh với hơn 300.000 từ." style="@style/AboutTextViewStyle" />
+                <com.vng.dict.view.NewRobotoTextView android:text="Từ điển Đồng Nghĩa với hơn 60.000 từ." style="@style/AboutTextViewStyle" />
+            </LinearLayout>
+            <com.vng.dict.view.NewRobotoTextView android:textSize="14.0sp" android:textColor="@color/about_title" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/footer_number4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="Một sản phẩm của La Bàn" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

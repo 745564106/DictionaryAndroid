@@ -1,5 +1,6 @@
 package com.example.nguyenthanhthai.dictionaryandroid.model;
 
+import com.example.nguyenthanhthai.dictionaryandroid.domain.WordFavorite;
 import com.example.nguyenthanhthai.dictionaryandroid.domain.WordMearning;
 
 import java.io.Serializable;
@@ -88,7 +89,13 @@ public class Word implements Serializable{
     }
 
     public boolean getFavoriteWord(){
-        //TODO
-        return true;
+        return WordFavorite.getCheckWordFavorite(this.wordId);
+    }
+
+    public void getInsertWordFavorite() {
+        WordFavorite.getInsertWordFavorite(this.wordId);
+    }
+    public void getRemoveWordFavorite() {
+        WordFavorite.getRemoveWordFavorite(this.wordId);
     }
 }

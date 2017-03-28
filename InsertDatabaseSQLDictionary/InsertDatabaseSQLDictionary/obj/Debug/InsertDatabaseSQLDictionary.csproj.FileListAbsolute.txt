@@ -1,0 +1,6 @@
+D:\Desktop\InsertDatabaseSQLDictionary\InsertDatabaseSQLDictionary\bin\Debug\InsertDatabaseSQLDictionary.exe.config
+D:\Desktop\InsertDatabaseSQLDictionary\InsertDatabaseSQLDictionary\bin\Debug\InsertDatabaseSQLDictionary.exe
+D:\Desktop\InsertDatabaseSQLDictionary\InsertDatabaseSQLDictionary\bin\Debug\InsertDatabaseSQLDictionary.pdb
+D:\Desktop\InsertDatabaseSQLDictionary\InsertDatabaseSQLDictionary\obj\Debug\InsertDatabaseSQLDictionary.csprojResolveAssemblyReference.cache
+D:\Desktop\InsertDatabaseSQLDictionary\InsertDatabaseSQLDictionary\obj\Debug\InsertDatabaseSQLDictionary.exe
+D:\Desktop\InsertDatabaseSQLDictionary\InsertDatabaseSQLDictionary\obj\Debug\InsertDatabaseSQLDictionary.pdb

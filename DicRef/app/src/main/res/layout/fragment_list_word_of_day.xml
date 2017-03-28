@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dragView" android:background="@color/white" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <ImageView android:id="@id/back_to_previous" android:background="?selectableItemBackground" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_back" android:layout_centerVertical="true" />
+        <com.vng.dict.view.NewRobotoTextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/item_word_of_day" android:layout_toRightOf="@id/back_to_previous" android:layout_centerInParent="true" font="medium" />
+        <ImageView android:id="@id/imgDeleteAll" android:background="?selectableItemBackground" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/store_item_delete" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@drawable/above_shadow" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ListView android:scrollbarStyle="outsideInset" android:id="@id/lvWords" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/fragment_title_padding_top" android:cacheColorHint="@color/transparent" android:divider="@drawable/divider" android:dividerHeight="1.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:id="@id/flLoadingView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+    </FrameLayout>
+    <TextView android:gravity="center" android:id="@id/tvEmpty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/wod_list_empty" android:layout_weight="1.0" />
+</LinearLayout>

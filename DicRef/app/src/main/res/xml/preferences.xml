@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vng.dict.view.MPreferenceCategory android:title="@string/setting_title_genaral">
+        <com.vng.dict.view.MListPreference android:title="@string/setting_title_display_lang" android:key="pref_display_language" defaultValue="@string/default_display_language_list_preference" entries="@array/display_languages" entryValues="@array/short_languages" />
+        <com.vng.dict.view.MListPreference android:title="@string/setting_title_speech_method" android:key="preference_speech_method" defaultValue="@string/default_speech_method_list_preference" entries="@array/speech_method" entryValues="@array/speech_method_values" />
+        <com.vng.dict.view.MListPreference android:title="@string/setting_title_textSize" android:key="preference_textSize" defaultValue="@string/default_textSize_list_preference" entries="@array/text_sizes" entryValues="@array/text_size_values" />
+    </com.vng.dict.view.MPreferenceCategory>
+    <com.vng.dict.view.MPreferenceDivider />
+    <com.vng.dict.view.MPreferenceCategory android:title="@string/setting_title_camera">
+        <com.vng.dict.view.MListPreference android:title="@string/setting_title_recog_engine" android:key="preference_ocr_engine_mode" defaultValue="@string/default_value_engine_list_preference" entries="@array/ocrenginemodes" entryValues="@array/ocrenginemodes" />
+        <com.vng.dict.view.MCheckBoxPreference android:title="@string/setting_title_autofocus" android:key="preferences_auto_focus" android:defaultValue="@string/default_value_autofocus_preference" />
+        <com.vng.dict.view.MCheckBoxPreference android:title="@string/setting_title_beep" android:key="preferences_play_beep" android:defaultValue="@string/default_value_beep_preference" />
+    </com.vng.dict.view.MPreferenceCategory>
+    <com.vng.dict.view.MPreferenceDivider />
+    <com.vng.dict.view.MPreferenceCategory android:title="@string/setting_other">
+        <com.vng.dict.view.MPreference android:title="@string/db_moving_external_hint" android:key="preference_moving_data" />
+        <com.vng.dict.view.MPreference android:title="@string/about_hint" android:key="preferences_about" />
+    </com.vng.dict.view.MPreferenceCategory>
+</PreferenceScreen>
